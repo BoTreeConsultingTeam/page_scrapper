@@ -26,11 +26,12 @@ class Api::V1::PageScrapperControllerTest < ActionController::TestCase
     get :index
     assert_response :success
     assert_equal 2, json_response.size
-    assert_equal page.url, json_response.keys[0].to_s
-    assert_equal page.page_contents.h1[0].tag_content, json_response.values[0][:h1][0]
-    assert_equal page.page_contents.h2[0].tag_content, json_response.values[0][:h2][0]
-    assert_equal page.page_contents.h3[0].tag_content, json_response.values[0][:h3][0]
-    assert_equal page.page_contents.link[0].tag_content, json_response.values[0][:link][0]
+    first_page = json_response.first
+    assert_equal page.url, first_page.keys[0].to_s
+    assert_equal page.page_contents.h1[0].tag_content, first_page.values[0][:h1][0]
+    assert_equal page.page_contents.h2[0].tag_content, first_page.values[0][:h2][0]
+    assert_equal page.page_contents.h3[0].tag_content, first_page.values[0][:h3][0]
+    assert_equal page.page_contents.link[0].tag_content, first_page.values[0][:link][0]
   end
   
   test "scrape url should fetch url data h1,h2,h3 and link when url is valid" do
