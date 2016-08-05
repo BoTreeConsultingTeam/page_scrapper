@@ -14,7 +14,7 @@ Scrapes a URL and stores the contents. It provides a RESTful API to index a page
 - Configure database.yml as per your local settings
 - Create database by executing command `rake db:create`
 - Perform database migrations by `rake db:migrate`
-- All the API calls and endpoints are listed in wiki
+- All the API calls and endpoints are listed in [wiki](https://github.com/BoTreeConsultingTeam/page_scrapper/wiki/API)
 - To execute the API calls start the rails server by `rails s`
 - To run the tests execute `rake test`
 
