@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PageScrapper</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Page Content Extractor</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><%= link_to 'Home', pages_list_path%></li>
+      <li><%= link_to 'New', page_new_path%></li>
+    </ul>
+  </div>
+</nav>
+
+<%= yield %>
+
+</body>
+</html>

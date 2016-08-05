@@ -1,0 +1,26 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+h1:
+  tag_type: 1
+  tag_content: H1 Content
+  page: one
+
+h2:
+  tag_type: 2
+  tag_content: H2 Content
+  page: one
+
+h3:
+  tag_type: 3
+  tag_content: H3 Content
+  page: one  
+
+link:
+  tag_type: 4
+  tag_content: https://medium.com/botree-technologies/about
+  page: one  
+
+h1_two:
+  tag_type: 1
+  tag_content: H1 Content
+  page: two
