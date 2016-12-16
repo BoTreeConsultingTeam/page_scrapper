@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -28,6 +27,8 @@ ActiveRecord::Schema.define(version: 20160804081308) do
     t.string   "url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["url"], name: "index_pages_on_url", using: :btree
   end
 
+  add_foreign_key "page_contents", "pages"
 end

@@ -10,7 +10,7 @@ class ScrapAndSaveTest < ActiveSupport::TestCase
 
     assert_equal EXAMPLE_URL, page.url
     assert_equal 4, page.page_contents.count
-    assert_equal PageContent.tag_types.values, page.page_contents.pluck(:tag_type)
+    assert_equal PageContent.tag_types.keys, page.page_contents.pluck(:tag_type)
   end
 
   private
